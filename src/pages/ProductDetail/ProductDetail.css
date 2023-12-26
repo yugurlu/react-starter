@@ -11,7 +11,20 @@
   }
 }
 
-.rating
+.product-detail
 {
   display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.actions
+{
+  display: flex;
+  gap: 15px;
+}
+
+.actions button 
+{
+  flex: 1;
 }

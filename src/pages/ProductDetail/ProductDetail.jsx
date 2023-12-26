@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ProductDetail.css";
-import img from "../../public/star.svg";
+
 export const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -46,10 +46,6 @@ export const ProductDetail = () => {
       <div class="product-detail">
         <h1>{product.title}</h1>
         <p>{product.description}</p>
-        <h1 class="rating">
-          <img src={img} />
-          <span>{product.rating}</span>
-        </h1>
         <h4 class="price">
           Current Price <span>{product.price}$ </span>
         </h4>
