@@ -3,17 +3,7 @@ import {Link} from "react-router-dom";
 import axios from "axios";
 
 export default function Homepage() {
-	// http isteği
-
 	useEffect(() => {
-		// gelen veriyi json olarak console'a yazdır.
-
-		// fetch("https://dummyjson.com/products")
-		// 	.then(response => response.json())
-		// 	.then(json => console.log(json))
-		// 	.catch(err => console.log(err));
-
-		//awaitFetch();
 		axiosGet();
 	}, []);
 

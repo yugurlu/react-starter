@@ -1,7 +1,15 @@
 import {Link} from "react-router-dom";
 
 function ProductCard(props) {
-	console.log(props);
+
+	const deleteProduct = async () => {
+		fetch('https://dummyjson.com/products/' + props.product.id, {
+  			method: 'DELETE',
+		})
+		.then(res => res.json())
+		.then(() => alert(props.product.title + " Urunu silindi!"));
+	}
+
 	return (
 		<div class="card">
 			<img
@@ -12,10 +20,10 @@ function ProductCard(props) {
 			<div class="card-body">
 				<h5 class="card-title">{props.product.title}</h5>
 				<p class="card-text">{props.product.description}</p>
-				<Link to={"/products?id=" + props.product.id} class="btn btn-primary">
+				<Link to={`/products/${props.product.id}`} class="btn btn-primary">
 					Detail
 				</Link>
-				<button className="btn btn-danger">Sil</button>
+				<button className="btn btn-danger" onClick={deleteProduct} >Sil</button>
 			</div>
 		</div>
 	);

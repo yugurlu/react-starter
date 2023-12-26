@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import ProductCard from "../../components/ProductCard/ProductCard";
+
 export default function Products() {
-	// verileri çek
-	// maple
+
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
@@ -13,10 +13,8 @@ export default function Products() {
 	const axiosGet = async () => {
 		let response = await axios.get("https://dummyjson.com/products");
 		setProducts(response.data.products);
-		console.log(response.data.products);
 	};
 
-	// responsive?
 	return (
 		<div className="container mt-0 mt-md-5">
 			<div className="row">

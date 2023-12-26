@@ -1,0 +1,17 @@
+.price span
+{
+  color: #ff9f1a;
+}
+
+
+@media (max-width: 768px) {
+  .img-fluid {
+     max-width: 100%;
+     height: auto;
+  }
+}
+
+.rating
+{
+  display: flex;
+}
